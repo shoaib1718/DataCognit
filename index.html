@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DataCognit</title>
+  <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+  <header>
+    <h1>DataCognit</h1>
+    <div class="hamburger">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <img src="Datacognit_logo_v1.0_print.png" alt="Hero image" class="logo">
+      <div class="hero-content">
+        <h2>Welcome to DataCognit</h2>
+        <p>Chin tapak dam dam (Just Kidding).</p>
+        <a href="#about" class="button">Learn More</a>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <h2>About Us</h2>
+      <div class="about-content">
+        <p>At DataCognit, we are a team of passionate data experts dedicated to empowering organizations to unlock the full potential of their data...</p>
+        <p>With years of experience in ETL support and solutions, we specialize in Informatica, Oracle Database, and Snowflake, delivering tailored services...</p>
+      </div>
+    </section>
+
+    <section id="services" class="services">
+      <h2>Our Services</h2>
+      <div class="service-list">
+        <div class="service-item">
+          <h3>ETL Solutions</h3>
+          <p>We provide expert ETL support, enabling seamless data integration, management, and analytics with tools like Informatica and Oracle Database.</p>
+        </div>
+        <div class="service-item">
+          <h3>Data Management</h3>
+          <p>Data management solutions tailored to help you optimize workflows and make informed decisions for business growth.</p>
+        </div>
+        <div class="service-item">
+          <h3>Snowflake Solutions</h3>
+          <p>Expert implementation of Snowflake for cloud-based data storage, management, and analytics.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>Contact Us</h2>
+      <p>If you have any questions or would like to get in touch, feel free to reach out to us using the form below:</p>
+      <form>
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Your Email" required>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+
+        <button type="submit">Send</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; DataCognit 2023</p>
+    <p>The Tapal House #118, Vijayapura, KARNATAKA 586102</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
