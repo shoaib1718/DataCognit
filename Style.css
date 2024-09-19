@@ -65,7 +65,7 @@ body {
     background: url('hero-background.jpg') center/cover no-repeat;
     text-align: center;
     padding: 100px 20px;
-    color: white;
+    color: rgb(22, 144, 36);
   }
   
   .hero-content {
