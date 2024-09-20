@@ -93,6 +93,37 @@ body {
   .button:hover {
     background-color: #555;
   }
+
+/* Our Pillar Section */
+.pillar {
+  padding: 50px;
+  background-color: #136733;
+  text-align: center;
+}
+
+.pillar-list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.pillar-item {
+  background-color: white;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  max-width: 300px;
+}
+
+.pillar-item h3 {
+  margin-bottom: 15px;
+}
+
+.pillar-item p {
+  font-size: 1em;
+}
   
   /* About Us Section */
   .about {
@@ -120,7 +151,7 @@ body {
   /* Our Services Section */
   .services {
     padding: 50px;
-    background-color: #e0f7e9;
+    background-color: #136733;
     text-align: center;
   }
   
@@ -151,7 +182,7 @@ body {
   /* Contact Us Section */
   .contact {
     padding: 50px;
-    background-color: #f9f9f9;
+    background-color: #136733;
     text-align: center;
   }
   
@@ -181,7 +212,7 @@ body {
   }
   
   button[type="submit"] {
-    background-color: #078e2f;
+    background-color: #09a528;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -264,35 +295,45 @@ body {
     .logo {
       max-width: 60%;
     }
+
+    .pillar-list {
+      flex-direction: column;
+      align-items: center;
+    }
   
     .service-list {
       flex-direction: column;
       align-items: center;
     }
-      .logoImage{
-  max-width: 150px; 
-  margin: 10px;
-  display: block;
-  margin: 0 auto;
-  height: auto;
-  object-fit: contain;  
-}
+    
+    .logoImage {
+      max-width: 150px; 
+      margin: 10px;
+      display: block;
+      margin: 0 auto;
+      height: auto;
+      object-fit: contain;  
+    }
   }
   
   @media (max-width: 480px) {
-    .about, .services, .contact {
-      padding: 30px;
+    .about, .services,.pillar .contact {
+        padding: 30px;
+    }
+    .pillar-item {
+        max-width: 100%;
     }
   
     .service-item {
       max-width: 100%;
     }
-      .logoImage{
-  max-width: 150px; 
-  margin: 10px;
-  display: block;
-  margin: 0 auto;
-  height: auto;
-  object-fit: contain;  
-}
+    
+    .logoImage{
+          max-width: 150px; 
+          margin: 10px;
+          display: block;
+          margin: 0 auto;
+          height: auto;
+          object-fit: contain;  
+    }
   }
