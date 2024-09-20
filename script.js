@@ -1,17 +1,27 @@
+// JavaScript
+// JavaScript for animation on scroll
+document.addEventListener("DOMContentLoaded", function () {
+  const animatedItems = document.querySelectorAll('.animate');
+
+  function animateOnScroll() {
+    animatedItems.forEach(item => {
+      const itemPosition = item.getBoundingClientRect().top;
+      const viewHeight = window.innerHeight;
+
+      if (itemPosition < viewHeight - 100) {
+        item.classList.add('visible');
+      }
+    });
+  }
+
+  window.addEventListener('scroll', animateOnScroll);
+  animateOnScroll();  // Trigger once on load
+});
+
 // Hamburger menu toggle
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('nav ul');
 
 hamburger.addEventListener('click', () => {
   navMenu.classList.toggle('active');
-});
-
-// Smooth scroll for section links
-document.querySelectorAll('nav a').forEach(link => {
-  link.addEventListener('click', event => {
-    event.preventDefault();
-    const target = document.querySelector(link.getAttribute('href'));
-    target.scrollIntoView({ behavior: 'smooth' });
-    navMenu.classList.remove('active'); // Close menu after click
-  });
 });
