@@ -182,19 +182,6 @@ h1 {
   object-fit: contain;
 }
 
-/* .button {
-  background-color: #333;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  cursor: pointer;
-  margin-top: 20px;
-}
-
-.button:hover {
-  background-color: #555;
-} */
-
 /* Our Pillar Section */
 .pillar {
   padding: 50px;
@@ -363,110 +350,84 @@ footer {
   object-fit: contain;
 }
 
-/* Slideshow container */
+/* Slideshow Container */
 .slideshow-container {
   position: relative;
   max-width: 100%;
-  /* Ensure it fits well in the container */
+  margin: auto;
+  overflow: hidden;
 }
 
-/* Ensuring all images fit the container */
-.slideshow-container img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* Hide the slides by default */
 .slide {
   display: none;
 }
 
-/* Fade animation */
+.slideImage {
+  width: 100%;
+  height: auto;
+  max-height: 70vh;
+  object-fit: cover;
+}
+
+/* Fading Animation */
 .fade {
-  animation-name: fade;
-  animation-duration: 3.5s;
+  animation: fadeEffect 1s;
 }
 
-@keyframes fade {
-  from {
-    opacity: .4
-  }
-
-  to {
-    opacity: 1
-  }
+@keyframes fadeEffect {
+  from { opacity: 0.4; } 
+  to { opacity: 1; }
 }
 
-/* Next & previous buttons */
-.prev,
-.next {
+/* Navigation Buttons */
+.prev, .next {
   cursor: pointer;
   position: absolute;
   top: 50%;
-  width: 15px;
-  /* Reduced width */
-  height: 15px;
-  /* Reduced height */
-  margin-top: -15px;
-  /* Center vertically */
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
   color: white;
-  /* Button color */
   font-weight: bold;
-  /* Font weight */
   font-size: 18px;
-  /* Font size */
   transition: 0.6s ease;
-  /* Transition effect */
-  /* user-select: none; Prevent text selection */
-  background-color: rgba(0, 0, 0, 0.5);
-  /* Background color */
   border-radius: 50%;
-  /* Circular shape */
-  display: flex;
-  /* Flexbox for centering */
-  justify-content: center;
-  /* Center content */
-  align-items: center;
-  /* Center content */
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
-.prev:hover,
-.next:hover {
+.prev:hover, .next:hover {
   background-color: rgba(0, 0, 0, 0.8);
-  /* Darker background on hover */
 }
 
-/* Positioning the prev button on the left side */
 .prev {
   left: 10px;
-  /* Adjust position */
 }
 
-
-
-/* Positioning the next button on the right side */
 .next {
   right: 10px;
-  /* Adjust position */
 }
 
-/* Hover effect for next/prev buttons */
-.prev:hover,
-.next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-  /* Darken on hover */
+/* Dots below slideshow */
+.spanDiv {
+  text-align: center;
+  position: relative;
+  bottom: 0;
+  width: 100%;
 }
 
-/* Dots for navigation */
 .dot {
+  cursor: pointer;
   height: 15px;
   width: 15px;
-  margin: 0 2px;
+  margin: 0 5px;
   background-color: #bbb;
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.6s ease;
+}
+
+.dot.active, .dot:hover {
+  background-color: #717171;
 }
 
 /* Span CSS */
@@ -480,7 +441,6 @@ footer {
 @media (min-width: 1024px) {
   .slideshow-container {
     width: 60%;
-    /* Reduce size to 60% of the screen on large screens */
     max-width: 700px;
     height: 350px;
     margin: 30px auto;
@@ -508,21 +468,13 @@ footer {
 /* Responsive Design */
 @media (max-width: 768px) {
 
-  .prev,
-  .next {
-    width: 25px;
-    /* Smaller width for mobile */
-    height: 25px;
-    /* Smaller height for mobile */
-    font-size: 16px;
-    /* Smaller font size for mobile */
-    margin-top: -12.5px;
-    /* Center vertically for smaller buttons */
+  .slideImage {
+    height: 50vh;
   }
-
-  .slideshow-container {
-    max-width: 100%;
-    margin: 0 auto;
+  
+  .prev, .next {
+    font-size: 14px;
+    padding: 12px;
   }
 
   .text {
@@ -622,5 +574,19 @@ footer {
 
   h1 {
     font-size: 1.2em;   /* Reduce font size for mobile */
+  }
+
+  .slideImage {
+    max-height: 40vh;
+  }
+
+  .prev, .next {
+    font-size: 12px;
+    padding: 10px;
+  }
+
+  .dot {
+    height: 10px;
+    width: 10px;
   }
 }
