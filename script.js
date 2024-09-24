@@ -51,23 +51,23 @@ document.getElementById("scrollToTop").addEventListener("click", function () {
 
 
 
-// Show slides and automatically change them every 3 seconds
-function showSlides() {
-  const slides = document.querySelectorAll(".slide");
-  const dots = document.querySelectorAll(".dot");
+// // Show slides and automatically change them every 3 seconds
+// function showSlides() {
+//   const slides = document.querySelectorAll(".slide");
+//   const dots = document.querySelectorAll(".dot");
 
-  slides.forEach((slide, i) => {
-    slide.style.display = "none";
-  });
-  slideIndex++;
-  if (slideIndex > slides.length) { slideIndex = 1 }
+//   slides.forEach((slide, i) => {
+//     slide.style.display = "none";
+//   });
+//   slideIndex++;
+//   if (slideIndex > slides.length) { slideIndex = 1 }
 
-  slides[slideIndex - 1].style.display = "block";
-  dots.forEach(dot => dot.classList.remove("active"));
-  dots[slideIndex - 1].classList.add("active");
+//   slides[slideIndex - 1].style.display = "block";
+//   dots.forEach(dot => dot.classList.remove("active"));
+//   dots[slideIndex - 1].classList.add("active");
 
-  autoSlideInterval = setTimeout(showSlides, 3000); // Change slide every 3 seconds
-}
+//   autoSlideInterval = setTimeout(showSlides, 3000); // Change slide every 3 seconds
+// }
 
 // Manually change slides
 function plusSlides(n) {
@@ -182,4 +182,3 @@ function currentSlide(n) {
   slides[slideIndex - 1].style.display = 'block';
   dots[slideIndex - 1].classList.add('active');
 }
-
