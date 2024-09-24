@@ -182,19 +182,6 @@ h1 {
   object-fit: contain;
 }
 
-/* .button {
-  background-color: #333;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  cursor: pointer;
-  margin-top: 20px;
-}
-
-.button:hover {
-  background-color: #555;
-} */
-
 /* Our Pillar Section */
 .pillar {
   padding: 50px;
@@ -363,6 +350,7 @@ footer {
   object-fit: contain;
 }
 
+
 /* Slideshow container */
 .slideshow-container {
   position: relative;
@@ -470,9 +458,35 @@ footer {
 }
 
 /* Span CSS */
-.spanDiv
-{
-  text-align:center;
+.spanDiv {
+  text-align: center;
+}
+
+/* Responsive Design for Larger Screens */
+@media (max-width: 1024px) {
+  .slideshow-container {
+    width: 60%;
+    max-width: 700px;
+    height: 350px;
+    margin: 30px auto;  
+  }
+
+  /* Increase size of next/prev buttons on desktop */
+  .prev,
+  .next {
+    width: 40px;
+    height: 40px;
+  }
+
+  .prev {
+    left: 20px;
+    /* Move prev button more to the left */
+  }
+
+  .next {
+    right: 20px;
+    /* Move next button more to the right */
+  }
 }
 
 
@@ -480,18 +494,17 @@ footer {
 @media (min-width: 1024px) {
   .slideshow-container {
     width: 60%;
-    /* Reduce size to 60% of the screen on large screens */
     max-width: 700px;
     height: 350px;
-    margin: 30px auto;
+    margin: 30px auto;  
   }
 
   /* Increase size of next/prev buttons on desktop */
   .prev,
   .next {
-    padding: 20px;
-    font-size: 24px;
-    /* Make buttons larger */
+    width: 40px;
+    height: 40px;
+    margin-top: 20px;
   }
 
   .prev {
@@ -516,12 +529,13 @@ footer {
     /* Smaller height for mobile */
     font-size: 16px;
     /* Smaller font size for mobile */
-    margin-top: -12.5px;
+    /* margin-top: -12.5px; */
     /* Center vertically for smaller buttons */
+    /* margin-top: 60px; */
   }
 
   .slideshow-container {
-    max-width: 100%;
+    max-width: 90%;
     margin: 0 auto;
   }
 
@@ -538,13 +552,18 @@ footer {
   nav ul {
     display: none;
     flex-direction: column;
-    background-color: rgba(51, 51, 51, 0.95); /* Semi-transparent background */
-    position: absolute; /* Make it fixed to overlay */
-    top: 60px; /* Below the header */
+    background-color: rgba(51, 51, 51, 0.95);
+    /* Semi-transparent background */
+    position: absolute;
+    /* Make it fixed to overlay */
+    top: 60px;
+    /* Below the header */
     right: 0;
     width: 100%;
-    z-index: 100; /* Ensure it appears above everything else */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Shadow for better visibility */
+    z-index: 100;
+    /* Ensure it appears above everything else */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    /* Shadow for better visibility */
   }
 
   nav ul.active {
@@ -558,13 +577,15 @@ footer {
   nav ul li a {
     display: grid;
     padding: 15px;
-    color: white; /* Change link color for visibility */
+    color: white;
+    /* Change link color for visibility */
   }
 
   nav ul li :hover {
     display: block;
     padding: 15px;
-    color: rgb(136, 123, 123); /* Change link color for visibility */
+    color: rgb(136, 123, 123);
+    /* Change link color for visibility */
   }
 
   .logo {
@@ -617,20 +638,12 @@ footer {
   }
 
   .header-logo {
-    max-width: 60px;  /* Further reduce logo size on mobile */
+    max-width: 60px;
+    /* Further reduce logo size on mobile */
   }
 
   h1 {
-    font-size: 1.2em;   /* Reduce font size for mobile */
-  }
-}
-
-/* Responsive Design for Larger Screens */
-@media (min-width: 1024px) {
-  .slideshow-container {
-    width: 60%;   /* Reduce size to 60% of the screen on large screens */
-    max-width: 700px;   /* Reduce maximum size */
-    height: 350px;    /* Adjust height proportionally */
-    margin: 30px auto;    /* Add more space around the sides */
+    font-size: 1.2em;
+    /* Reduce font size for mobile */
   }
 }
