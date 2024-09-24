@@ -437,13 +437,6 @@ footer {
   text-align:center;
 }
 
-/* CSS for Pillar - Links  */
-.pillar-link {
-  text-decoration: none;
-  color: inherit;
-}
-
-
 /* Responsive Design for Larger Screens */
 @media (min-width: 1024px) {
   .slideshow-container {
