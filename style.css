@@ -1,0 +1,594 @@
+/* CSS Code  */
+/* General Styling */
+body {
+  font-family: Roboto, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+header {
+  background-color: rgba(255, 255, 255, 0.95);
+  color: #333;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  height: 60px;
+  position: relative;
+}
+
+
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  color: rgb(0, 192, 122);
+  text-decoration: none;
+  padding: 10px;
+}
+
+nav ul li a:hover {
+  background-color: #0c8530;
+  border-radius: 5px;
+}
+
+#details {
+  color: #000;
+}
+
+/* Scroll to Top Button */
+#scrollToTop {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  /* Stick to the right side */
+  z-index: 99;
+  width: 50px;
+  /* Make it round by setting equal width and height */
+  height: 50px;
+  background-color: #136733;
+  /* Button background color */
+  color: white;
+  /* Text (arrow) color */
+  border: none;
+  outline: none;
+  border-radius: 50%;
+  /* Make the button round */
+  font-size: 24px;
+  /* Size of the upward arrow */
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#scrollToTop:hover {
+  background-color: #555;
+  /* Change background on hover */
+}
+
+/* Container for logo and text */
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.header-logo {
+  max-width: 100px;
+  margin-right: 15px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 1.5em;
+  white-space: nowrap;
+  /* Prevents the text from wrapping */
+}
+
+/* Logo animation */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.logoImage {
+  max-width: 150px;
+  margin: 10px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s, transform 0.6s;
+}
+
+.animate.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
+/* Hamburger Menu Styling */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 25px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 10;
+  transition: transform 0.3s ease;
+}
+
+.hamburger div {
+  width: 100%;
+  height: 3px;
+  background-color: #333;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+/* Hamburger open state (when active) */
+.hamburger.active div:nth-child(1) {
+  transform: translateY(10px) rotate(45deg);
+}
+
+.hamburger.active div:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active div:nth-child(3) {
+  transform: translateY(-10px) rotate(-45deg);
+}
+
+/* Hero Section */
+.hero {
+  background: url('hero-background.jpg') center/cover no-repeat;
+  text-align: center;
+  padding: 100px 20px;
+  color: rgb(22, 144, 36);
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.logo {
+  display: block;
+  margin: 0 auto;
+  max-width: 50%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Our Pillar Section */
+.pillar {
+  padding: 50px;
+  background-color: #136733;
+  text-align: center;
+}
+
+.pillar-list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.pillar-item {
+  background-color: white;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  max-width: 300px;
+}
+
+.pillar-item h3 {
+  margin-bottom: 15px;
+}
+
+.pillar-item p {
+  font-size: 1em;
+}
+
+/* About Us Section */
+.about {
+  padding: 50px;
+  background-color: #f5f5f5;
+  text-align: center;
+}
+
+.about-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.about h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.about-content p {
+  font-size: 1.1em;
+  margin-bottom: 20px;
+}
+
+/* Our Services Section */
+.services {
+  padding: 50px;
+  background-color: #136733;
+  text-align: center;
+}
+
+.service-list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.service-item {
+  background-color: white;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  max-width: 300px;
+}
+
+.service-item h3 {
+  margin-bottom: 15px;
+}
+
+.service-item p {
+  font-size: 1em;
+}
+
+/* Contact Us Section */
+.contact {
+  padding: 50px;
+  background-color: #136733;
+  text-align: center;
+}
+
+.contact p {
+  font-size: 1.1em;
+  margin-bottom: 30px;
+}
+
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button[type="submit"] {
+  background-color: #09a528;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #056f23;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #333;
+  color: #fff;
+}
+
+/* Tools Section */
+.tools {
+  padding: 50px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.tools h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.logo-list {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.logo-list img {
+  max-width: 150px;
+  height: auto;
+}
+
+.logoImage {
+  margin: 10px;
+  display: block;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Slideshow Container */
+.slideshow-container {
+  position: relative;
+  max-width: 100%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.slide {
+  display: none;
+}
+
+.slideImage {
+  width: 100%;
+  height: auto;
+  max-height: 70vh;
+  object-fit: cover;
+}
+
+/* Fading Animation */
+.fade {
+  animation: fadeEffect 1s;
+}
+
+@keyframes fadeEffect {
+  from { opacity: 0.4; } 
+  to { opacity: 1; }
+}
+
+/* Navigation Buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+/* Dots below slideshow */
+.spanDiv {
+  text-align: center;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.dot.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Span CSS */
+.spanDiv
+{
+  text-align:center;
+}
+
+
+/* Responsive Design for Larger Screens */
+@media (min-width: 1024px) {
+  .slideshow-container {
+    width: 60%;
+    max-width: 700px;
+    height: 350px;
+    margin: 30px auto;
+  }
+
+  /* Increase size of next/prev buttons on desktop */
+  .prev,
+  .next {
+    padding: 20px;
+    font-size: 24px;
+    /* Make buttons larger */
+  }
+
+  .prev {
+    left: 20px;
+    /* Move prev button more to the left */
+  }
+
+  .next {
+    right: 20px;
+    /* Move next button more to the right */
+  }
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+
+  .slideImage {
+    height: 50vh;
+  }
+  
+  .prev, .next {
+    font-size: 14px;
+    padding: 12px;
+  }
+
+  .text {
+    font-size: 16px;
+    bottom: 10px;
+    left: 10px;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background-color: rgba(51, 51, 51, 0.95); /* Semi-transparent background */
+    position: absolute; /* Make it fixed to overlay */
+    top: 60px; /* Below the header */
+    right: 0;
+    width: 100%;
+    z-index: 100; /* Ensure it appears above everything else */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Shadow for better visibility */
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+
+  nav ul li {
+    text-align: center;
+  }
+
+  nav ul li a {
+    display: grid;
+    padding: 15px;
+    color: white; /* Change link color for visibility */
+  }
+
+  nav ul li :hover {
+    display: block;
+    padding: 15px;
+    color: rgb(136, 123, 123); /* Change link color for visibility */
+  }
+
+  .logo {
+    max-width: 90%;
+  }
+
+  .pillar-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logoImage {
+    max-width: 150px;
+    margin: 10px;
+    display: block;
+    margin: 0 auto;
+    height: auto;
+    object-fit: contain;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .about,
+  .services,
+  .pillar .contact {
+    padding: 30px;
+  }
+
+  .pillar-item {
+    max-width: 100%;
+  }
+
+  .service-item {
+    max-width: 100%;
+  }
+
+  .logoImage {
+    max-width: 150px;
+    margin: 10px;
+    display: block;
+    margin: 0 auto;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .header-logo {
+    max-width: 60px;  /* Further reduce logo size on mobile */
+  }
+
+  h1 {
+    font-size: 1.2em;   /* Reduce font size for mobile */
+  }
+
+  .slideImage {
+    max-height: 40vh;
+  }
+
+  .prev, .next {
+    font-size: 12px;
+    padding: 10px;
+  }
+
+  .dot {
+    height: 10px;
+    width: 10px;
+  }
+}
