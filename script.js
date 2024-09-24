@@ -30,7 +30,7 @@ hamburger.addEventListener('click', () => {
 
 
 // Show the scroll button when the user scrolls down 20px from the top
-window.onscroll = function() {
+window.onscroll = function () {
   scrollFunction();
 };
 
@@ -44,7 +44,7 @@ function scrollFunction() {
 }
 
 // When the user clicks the button, scroll to the top
-document.getElementById("scrollToTop").addEventListener("click", function() {
+document.getElementById("scrollToTop").addEventListener("click", function () {
   document.body.scrollTop = 0; // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
 });
@@ -55,17 +55,17 @@ document.getElementById("scrollToTop").addEventListener("click", function() {
 function showSlides() {
   const slides = document.querySelectorAll(".slide");
   const dots = document.querySelectorAll(".dot");
-  
+
   slides.forEach((slide, i) => {
     slide.style.display = "none";
   });
   slideIndex++;
   if (slideIndex > slides.length) { slideIndex = 1 }
-  
-  slides[slideIndex-1].style.display = "block";
+
+  slides[slideIndex - 1].style.display = "block";
   dots.forEach(dot => dot.classList.remove("active"));
-  dots[slideIndex-1].classList.add("active");
-  
+  dots[slideIndex - 1].classList.add("active");
+
   autoSlideInterval = setTimeout(showSlides, 3000); // Change slide every 3 seconds
 }
 
@@ -108,33 +108,78 @@ function handleTouchMove(evt) {
   xStart = null; // Reset after handling
 }
 
-const slideshowContainer = document.querySelector('.slideshow-container');
-slideshowContainer.addEventListener('touchstart', handleTouchStart, false);
-slideshowContainer.addEventListener('touchmove', handleTouchMove, false);
+// JavaScript for the slideshow functionality
 
 let slideIndex = 0;
-showSlides(); // Start by showing the first slide
+showSlides();
 
+// Function to show the slides
 function showSlides() {
-  let i;
-  let slides = document.getElementsByClassName("slide");
+  let slides = document.querySelectorAll('.slide');
+  let dots = document.querySelectorAll('.dot');
   
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none"; // Hide all slides
-  }
+  // Hide all slides
+  slides.forEach(slide => slide.style.display = 'none');
   
-  slideIndex++; // Move to the next slide
-  
+  // Reset slideIndex if it exceeds the number of slides
+  slideIndex++;
   if (slideIndex > slides.length) {
-    slideIndex = 1; // Loop back to the first slide if at the end
+    slideIndex = 1;
   }
+
+  // Remove "active" class from all dots
+  dots.forEach(dot => dot.classList.remove('active'));
+
+  // Display the current slide and add "active" class to the corresponding dot
+  slides[slideIndex - 1].style.display = 'block';
+  dots[slideIndex - 1].classList.add('active');
   
-  slides[slideIndex-1].style.display = "block"; // Show the current slide
-  
-  setTimeout(showSlides, 5000); // Change image every 5 seconds
+  // Change slides every 5 seconds
+  setTimeout(showSlides, 5000);
 }
 
+// Function to manually navigate to the next/previous slide
 function plusSlides(n) {
-  slideIndex += n - 1;  // Adjust the slide index to account for the auto-slide timing
-  showSlides();
+  let slides = document.querySelectorAll('.slide');
+  let dots = document.querySelectorAll('.dot');
+  
+  // Hide the current slide
+  slides[slideIndex - 1].style.display = 'none';
+  
+  // Update the slideIndex
+  slideIndex += n;
+  
+  // Wrap around if slideIndex goes out of bounds
+  if (slideIndex > slides.length) {
+    slideIndex = 1;
+  } else if (slideIndex < 1) {
+    slideIndex = slides.length;
+  }
+
+  // Remove the active class from the current dot
+  dots.forEach(dot => dot.classList.remove('active'));
+
+  // Show the new slide and highlight the new dot
+  slides[slideIndex - 1].style.display = 'block';
+  dots[slideIndex - 1].classList.add('active');
 }
+
+// Function to manually navigate to a specific slide
+function currentSlide(n) {
+  let slides = document.querySelectorAll('.slide');
+  let dots = document.querySelectorAll('.dot');
+
+  // Hide the current slide
+  slides[slideIndex - 1].style.display = 'none';
+
+  // Update the slideIndex to the clicked dot's index
+  slideIndex = n;
+
+  // Remove the active class from the current dot
+  dots.forEach(dot => dot.classList.remove('active'));
+
+  // Show the new slide and highlight the new dot
+  slides[slideIndex - 1].style.display = 'block';
+  dots[slideIndex - 1].classList.add('active');
+}
+
