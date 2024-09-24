@@ -446,6 +446,11 @@ footer {
     margin: 30px auto;
   }
 
+  slideImage {
+    max-height: 90vh;
+    object-fit: cover;
+  }
+
   /* Increase size of next/prev buttons on desktop */
   .prev,
   .next {
@@ -471,7 +476,7 @@ footer {
 @media (max-width: 768px) {
 
   .slideImage {
-    height: 50vh;
+    height: 40vh;
   }
   
   .prev, .next {
