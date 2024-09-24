@@ -518,13 +518,13 @@ footer {
   nav ul li a {
     display: grid;
     padding: 15px;
-    color: white; /* Change link color for visibility */
+    color: rgb(244, 238, 238); /* Change link color for visibility */
   }
 
   nav ul li :hover {
     display: block;
     padding: 15px;
-    color: rgb(136, 123, 123); /* Change link color for visibility */
+    color: rgb(251, 249, 249); /* Change link color for visibility */
   }
 
   .logo {
