@@ -60,6 +60,7 @@ input[type="text"], input[type="email"], input[type="file"] {
     margin-top: 5px;
     border: 1px solid #ccc;
     border-radius: 4px;
+    width: 96%;
 }
 
 footer {
