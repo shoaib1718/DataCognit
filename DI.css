@@ -1,0 +1,104 @@
+body {
+    font-family: Arial, Roboto, sans-serif;
+    margin: 0;
+    padding: 5px;
+    color: #333;
+  }
+
+main {
+    padding: 20px;
+}
+
+h2,
+h3,
+h4 {
+    color: #159e3e;
+}
+
+.content {
+    /* max-width: 900px; */
+    width: 90%;
+    margin: 0 auto;
+}
+
+p {
+    margin: 1em 0;
+}
+
+ul,
+ol {
+    margin: 0 0 1em 20px;
+}
+
+.image-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+/* Scroll to Top Button */
+#scrollToTop {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    /* Stick to the right side */
+    z-index: 99;
+    width: 50px;
+    /* Make it round by setting equal width and height */
+    height: 50px;
+    background-color: #136733;
+    /* Button background color */
+    color: white;
+    /* Text (arrow) color */
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    /* Make the button round */
+    font-size: 24px;
+    /* Size of the upward arrow */
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#scrollToTop:hover {
+    background-color: #555;
+    /* Change background on hover */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 576px) {
+    .content {
+        padding: 10px;
+        width: 95%;
+    }
+
+    .header-logo {
+        max-width: 100px;
+    }
+}
