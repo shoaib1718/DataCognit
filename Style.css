@@ -213,7 +213,7 @@ nav ul li a:hover {
 
 /* Our Pillar Section */
 .pillar {
-    padding: 50px;
+    padding: 30px;
     background-color: #136733;
     text-align: center;
 }
@@ -335,6 +335,7 @@ button[type="submit"] {
     padding: 10px 20px;
     border: none;
     cursor: pointer;
+    border-radius: 15px;
 }
 
 button[type="submit"]:hover {
@@ -490,4 +491,10 @@ footer {
         font-size: 1.2em;
         /* Reduce font size for mobile */
     }
+}
+
+img{
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
 }
