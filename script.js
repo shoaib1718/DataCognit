@@ -18,6 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
   animateOnScroll();  // Trigger once on load
 });
 
+
 // Hamburger menu toggle
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('nav ul');
@@ -117,10 +118,10 @@ showSlides();
 function showSlides() {
   let slides = document.querySelectorAll('.slide');
   let dots = document.querySelectorAll('.dot');
-  
+
   // Hide all slides
   slides.forEach(slide => slide.style.display = 'none');
-  
+
   // Reset slideIndex if it exceeds the number of slides
   slideIndex++;
   if (slideIndex > slides.length) {
@@ -133,7 +134,7 @@ function showSlides() {
   // Display the current slide and add "active" class to the corresponding dot
   slides[slideIndex - 1].style.display = 'block';
   dots[slideIndex - 1].classList.add('active');
-  
+
   // Change slides every 5 seconds
   setTimeout(showSlides, 5000);
 }
@@ -142,13 +143,13 @@ function showSlides() {
 function plusSlides(n) {
   let slides = document.querySelectorAll('.slide');
   let dots = document.querySelectorAll('.dot');
-  
+
   // Hide the current slide
   slides[slideIndex - 1].style.display = 'none';
-  
+
   // Update the slideIndex
   slideIndex += n;
-  
+
   // Wrap around if slideIndex goes out of bounds
   if (slideIndex > slides.length) {
     slideIndex = 1;
@@ -181,5 +182,46 @@ function currentSlide(n) {
   // Show the new slide and highlight the new dot
   slides[slideIndex - 1].style.display = 'block';
   dots[slideIndex - 1].classList.add('active');
+}
+
+
+// Scroll to Top Button
+const scrollToTopBtn = document.getElementById("scrollToTop");
+
+window.onscroll = function() {
+  if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+    scrollToTopBtn.style.display = "block";
+  } else {
+    scrollToTopBtn.style.display = "none";
+  }
+};
+
+scrollToTopBtn.onclick = function() {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+};
+
+// script.js
+// For Career Page
+function applyForJob(jobTitle) {
+  // Set the job title in the application form
+  document.getElementById('job-title').value = jobTitle;
+}
+
+function submitApplication(event) {
+  event.preventDefault(); // Prevent the form from submitting normally
+
+  // Retrieve form data
+  const name = document.getElementById('name').value;
+  const email = document.getElementById('email').value;
+  const jobTitle = document.getElementById('job-title').value;
+
+  // Display a simple alert with application details (you can replace this with actual submission logic)
+  alert(`Application submitted!\nName: ${name}\nEmail: ${email}\nPosition: ${jobTitle}`);
+
+  // Reset the form
+  document.getElementById('form').reset();
 }
 
