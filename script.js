@@ -205,7 +205,12 @@ scrollToTopBtn.onclick = function() {
 
 // script.js
 // For Career Page
+
 function applyForJob(jobTitle) {
+  // Show the application form section
+  document.getElementById('job-listings').style.display = 'none';
+  document.getElementById('application-form').style.display = 'block';
+
   // Set the job title in the application form
   document.getElementById('job-title').value = jobTitle;
 }
@@ -221,7 +226,9 @@ function submitApplication(event) {
   // Display a simple alert with application details (you can replace this with actual submission logic)
   alert(`Application submitted!\nName: ${name}\nEmail: ${email}\nPosition: ${jobTitle}`);
 
-  // Reset the form
+  // Reset the form and go back to job listings
   document.getElementById('form').reset();
+  document.getElementById('application-form').style.display = 'none';
+  document.getElementById('job-listings').style.display = 'block';
 }
 
