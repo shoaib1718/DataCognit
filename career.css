@@ -1,49 +1,158 @@
-/* styles.css */
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
     font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+
+header {
+    background-color: rgba(255, 255, 255, 0.95);
+    color: #333;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    height: 60px;
+    position: relative;
+}
+
+/* Container for logo and text */
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.header-logo {
+    max-width: 100px;
+    margin-right: 15px;
+}
+
+
+nav ul {
+    list-style-type: none;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    display: flex;
 }
 
-
-main {
-    padding: 20px;
+nav ul li {
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
-h1, h2 {
-    color: #333;
+nav ul li a {
+    color: rgb(3, 4, 3);
+    text-decoration: none;
+    padding: 10px;
 }
 
-section {
-    margin: 20px 0;
-    background: white;
-    padding: 15px;
+nav ul li a:hover {
+    background-color: #12aa3f;
     border-radius: 5px;
+}
+
+/* Hamburger Menu Styling */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 10;
+    transition: transform 0.3s ease;
+  }
+  
+  .hamburger div {
+    width: 100%;
+    height: 3px;
+    background-color: #333;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+    position: relative;
+  }
+  
+  /* Hamburger open state (when active) */
+  .hamburger.active div:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+  }
+  
+  .hamburger.active div:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .hamburger.active div:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
+  }
+
+/* Job Listings Section */
+#job-listings {
+    background-color: white;
+    padding: 40px;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 1000px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.job-listing {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-ul {
-    list-style-type: none;
-    padding: 0;
+.job-details {
+    flex: 1;
 }
 
-li {
-    margin-bottom: 15px;
+h3 {
+    color: #4CAF50;
+    font-size: 1.5em;
 }
 
-button {
-    background-color: #28a745;
+button.apply-btn {
+    background-color: #4CAF50;
     color: white;
     border: none;
-    padding: 10px 15px;
-    cursor: pointer;
+    padding: 10px 20px;
+    font-size: 1em;
     border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-button:hover {
-    background-color: #218838;
+button.apply-btn:hover {
+    background-color: #45a049;
+}
+
+/* Application Form Section */
+#application-form {
+    background-color: white;
+    padding: 40px;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    display: none;
 }
 
 form {
@@ -52,23 +161,141 @@ form {
 }
 
 label {
-    margin-top: 10px;
+    font-size: 1.1em;
+    margin-bottom: 8px;
 }
 
-input[type="text"], input[type="email"], input[type="file"] {
+input[type="text"],
+input[type="email"],
+input[type="file"] {
     padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    width: 96%;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
 }
 
+button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Footer Styles */
 footer {
     text-align: center;
-    padding: 10px;
+    padding: 20px;
     background-color: #333;
     color: white;
     position: relative;
-    bottom: 0;
     width: 100%;
+}
+
+/* Scroll to Top Button */
+#scrollToTop {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    /* Stick to the right side */
+    z-index: 99;
+    width: 50px;
+    /* Make it round by setting equal width and height */
+    height: 50px;
+    background-color: #136733;
+    /* Button background color */
+    color: white;
+    /* Text (arrow) color */
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    /* Make the button round */
+    font-size: 24px;
+    /* Size of the upward arrow */
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#scrollToTop:hover {
+    background-color: #555;
+    /* Change background on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+      }
+    
+      nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: rgba(51, 51, 51, 0.95); /* Semi-transparent background */
+        position: absolute; /* Make it fixed to overlay */
+        top: 60px; /* Below the header */
+        right: 0;
+        width: 100%;
+        z-index: 100; /* Ensure it appears above everything else */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Shadow for better visibility */
+      }
+    
+      nav ul.active {
+        display: flex;
+      }
+    
+      nav ul li {
+        text-align: center;
+      }
+    
+      nav ul li a {
+        display: grid;
+        padding: 15px;
+        color: rgb(244, 238, 238); /* Change link color for visibility */
+      }
+    
+      nav ul li :hover {
+        display: block;
+        padding: 15px;
+        color: rgb(251, 249, 249); /* Change link color for visibility */
+      }
+
+    .job-listing {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    button.apply-btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    h3 {
+        font-size: 1.2em;
+    }
+
+    button.apply-btn,
+    button[type="submit"] {
+        font-size: 0.9em;
+        padding: 8px 12px;
+    }
+
+    .job-listing {
+        padding: 10px;
+    }
 }
