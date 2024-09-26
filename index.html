@@ -6,6 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DataCognit</title>
   <link rel="stylesheet" href="style.css">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -74,8 +77,6 @@
             real-time insights. Our team of seasoned data engineers and consultants work closely with clients to
             understand their unique needs and tailor solutions that drive growth and efficiency.
 
-
-
             We pride ourselves on a client-first approach, offering flexible and scalable solutions that can evolve with
             your organization. Our goal is simple: to transform your data into a strategic asset that enhances business
             agility and drives measurable outcomes.</p>
@@ -84,19 +85,17 @@
       </div>
     </section>
 
-    <section id="pillar" class="pillar">
+    <section  class="pillar">
       <h2>Our Pillars</h2>
       At DataCognit, we empower organizations to harness the full potential of
       data and AI by bridging the gap between digital strategy and practical implementation.
       Our expertise is built around four core pillars that drive transformative business outcomes.
       Our Four Pillars of Expertise:
       <div class="pillar-list">
-        <!-- Data Integration pillar with clickable link -->
         <div class="pillar-item" onclick="window.location='Data-Integration.html'">
           <h3>Data Integration</h3>
           <p>Seamless ETL, data warehousing and governance solutions to unify your data landscape.</p>
         </div>
-        <!-- </a> -->
 
         <!-- AI and Analytics pillar with clickable link -->
         <div class="pillar-item" onclick="window.location='AI-and-Analytics.html'">
@@ -195,8 +194,11 @@
     <p>The Tapal House #118, Vijayapura, KARNATAKA 586102</p>
   </footer>
   <!-- Scroll to Top Button -->
-  <button id="scrollToTop" title="Go to top">&#8679;</button>
-  <script src="script.js"></script>
+    <button id="scrollToTop" class="btn btn-success position-fixed bottom-0 end-0 m-3" title="Go to top">&#8679;</button>
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+   <script src="script.js"></script>
 </body>
 
 </html>
