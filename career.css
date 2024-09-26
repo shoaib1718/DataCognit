@@ -190,6 +190,11 @@ button[type="submit"]:hover {
     background-color: #45a049;
 }
 
+main {
+    flex: 1;
+  }
+
+
 /* Footer Styles */
 footer {
     text-align: center;
@@ -198,6 +203,8 @@ footer {
     color: white;
     position: relative;
     width: 100%;
+    bottom: 0;
+    padding: 1rem;
 }
 
 /* Scroll to Top Button */
