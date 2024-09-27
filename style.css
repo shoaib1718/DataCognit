@@ -7,10 +7,6 @@ body {
   color: #333;
 }
 
-.HeaderLogoLink{
-  text-decoration: none;
-}
-
 header {
   background-color: rgba(255, 255, 255, 0.95);
   color: #333;
