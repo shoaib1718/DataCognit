@@ -75,7 +75,7 @@
     <!-- Application Form Section -->
     <section id="application-form" class="mb-5">
       <h2 class="text-center mb-4">Application Form</h2>
-      <form id="form" class="row g-3" action="https://api.web3forms.com/submit" method="POST">
+      form id="form" class="row g-3" action="https://api.web3forms.com/submit" method="POST">
         <input type="hidden" name="access_key" value="b43aa648-b382-435a-aedd-239c592eb119">
         <div class="col-md-6">
           <label for="name" class="form-label">Name:</label>
@@ -89,10 +89,10 @@
           <label for="job-title" class="form-label">Position:</label>
           <input type="text" id="job-title" class="form-control">
         </div>
-        <div class="col-md-12">
+        <!-- <div class="col-md-12">
           <label for="resume" class="form-label">Upload Resume:</label>
           <input type="file" id="resume" class="form-control" required>
-        </div>
+        </div> -->
         <div class="col-12">
           <button type="submit" class="btn btn-success w-100">Submit Application</button>
         </div>
@@ -101,24 +101,7 @@
   </main>
 
   <footer>
-    <section id="contact" class="contact">
-      <h2>Contact Us</h2>
-      <p>If you have any questions or would like to get in touch, feel free to reach out to us using the form below:</p>
-      <form action="https://api.web3forms.com/submit" method="POST">
-
-        <input type="hidden" name="access_key" value="b43aa648-b382-435a-aedd-239c592eb119">
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" placeholder="Your Name" required>
-
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" placeholder="Your Email" required>
-
-        <label for="message">Message</label>
-        <textarea id="message" name="message" placeholder="Your Message" required></textarea>
-
-        <button type="submit">Send</button>
-      </form>
-    </section>
+    
     <p>&copy; DataCognit 2023</p>
     <p>The Tapal House #118, Vijayapura, KARNATAKA 586102</p>
   </footer>
