@@ -51,25 +51,18 @@ nav ul li a:hover {
 /* Scroll to Top Button */
 #scrollToTop {
   display: none;
-  /* Hidden by default */
   position: fixed;
   bottom: 20px;
   right: 20px;
-  /* Stick to the right side */
   z-index: 99;
   width: 50px;
-  /* Make it round by setting equal width and height */
   height: 50px;
   background-color: #136733;
-  /* Button background color */
   color: white;
-  /* Text (arrow) color */
   border: none;
   outline: none;
   border-radius: 50%;
-  /* Make the button round */
   font-size: 24px;
-  /* Size of the upward arrow */
   cursor: pointer;
   transition: background-color 0.3s;
 }
