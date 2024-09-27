@@ -238,6 +238,12 @@ footer {
     /* Change background on hover */
 }
 
+/* File Size  */
+.small-symbol {
+    font-size: 0.6em;
+    /* 80% of the paragraph font size */
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     nav ul {
