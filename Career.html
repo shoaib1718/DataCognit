@@ -72,10 +72,11 @@
       </div>
     </section>
 
-    <!-- Application Form Section -->
+    !-- Application Form Section -->
     <section id="application-form" class="mb-5">
       <h2 class="text-center mb-4">Application Form</h2>
-      <form id="form" class="row g-3" method="POST" action="send_email.php" enctype="multipart/form-data">
+      <form action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="b43aa648-b382-435a-aedd-239c592eb119">
         <div class="col-md-12">
           <label for="name" class="form-label">Name:</label>
           <input type="text" id="name" name="name" class="form-control" required>
