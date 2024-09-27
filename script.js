@@ -50,6 +50,12 @@ document.getElementById("scrollToTop").addEventListener("click", function () {
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
 });
 
+// Select the logo container div
+document.querySelector('.logo-container').addEventListener('click', function() {
+  // Redirect to index.html
+  window.location.href = 'index.html';
+});
+
 
 
 // // Show slides and automatically change them every 3 seconds
