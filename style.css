@@ -433,6 +433,26 @@ footer {
   text-align:center;
 }
 
+.animated-text {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  letter-spacing: 0.15em;
+  animation: typing 4s steps(30, end);
+  /* font-size: larger; */
+  font-size: 5em;
+
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 80%;
+  }
+}
+
 /* Responsive Design for Larger Screens */
 @media (min-width: 1024px) {
   .slideshow-container {
@@ -543,6 +563,11 @@ footer {
     margin: 0 auto;
     height: auto;
     object-fit: contain;
+  }
+
+  .animated-text {
+    font-size: 2em;
+  
   }
 }
 
