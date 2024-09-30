@@ -5,10 +5,6 @@ body {
   margin: 0;
   padding: 0;
   color: #333;
-
-  /* justify-content: center;
-  align-items: center;
-  display: flex; */
 }
 
 
@@ -704,4 +700,36 @@ footer {
     width: 10px;
   }
 
+}
+
+
+
+/* Process Steps */
+.process-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-bottom: 20px;
+}
+
+.step {
+  background-color: #e9ecef;
+  border-radius: 6px;
+  padding: 20px;
+  position: relative;
+}
+
+.step-icon {
+  font-size: 24px;
+  color: #13a600;
+  position: absolute;
+  top: -10px;
+  left: 20px;
+}
+
+/* Connectors */
+.connector {
+  border-left: 2px solid #087205;
+  height: 30px;
+  margin: 0 auto;
 }
