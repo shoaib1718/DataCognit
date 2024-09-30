@@ -1,121 +1,749 @@
-<!DOCTYPE html>
-<html lang="en">
+/* CSS Code  */
+/* General Styling */
+body {
+  font-family: Roboto, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DataCognit Careers</title>
-  
-  <link rel="stylesheet" href="career.css">
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+  /* justify-content: center;
+  align-items: center;
+  display: flex; */
+}
 
-</head>
 
-<body>
-  <header>
-    <div class="logo-container">      
-        <a href="index.html">
-        <img src="Datacognit_logo_v1.0_print.png" alt="DataCognit Logo" class="header-logo"></a>
-    </div>
-    <div class="hamburger" id="hamburger">
-      <div></div>
-      <div></div>
-      <div></div>
-    </div>
-    <nav id="nav-links">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="index.html#about">About Us</a></li>
-        <li><a href="index.html#contact">Contact</a></li>
-        <li><a href="index.html#services">Services</a></li>
-        <li><a href="Career.html">Careers</a></li>
-      </ul>
-    </nav>
-  </header>
 
-  <main class="container my-5">
-    <!-- Job Listings Section -->
-    <section id="job-listings" class="mb-5">
-      <h2 class="text-center mb-4">Current Job Openings</h2>
-    
-      <div class="card mb-3">
-        <div class="card-body d-flex justify-content-between align-items-center">
-          <div>
-            <h3 class="card-title">Software Engineer</h3>
-            <p class="card-text"><strong>Location:</strong> Remote</p>
-            <p class="card-text"><strong>Responsibilities:</strong> Develop and maintain web applications.</p>
-          </div>
-          <button class="btn btn-success" onclick="applyForJob('Software Engineer')">Apply Now</button>
-        </div>
-      </div>
-    
-      <div class="card mb-3">
-        <div class="card-body d-flex justify-content-between align-items-center">
-          <div>
-            <h3 class="card-title">Product Manager</h3>
-            <p class="card-text"><strong>Location:</strong> New York, NY</p>
-            <p class="card-text"><strong>Responsibilities:</strong> Oversee product development and strategy.</p>
-          </div>
-          <button class="btn btn-success" onclick="applyForJob('Product Manager')">Apply Now</button>
-        </div>
-      </div>
-    
-      <div class="card mb-3">
-        <div class="card-body d-flex justify-content-between align-items-center">
-          <div>
-            <h3 class="card-title">UX/UI Designer</h3>
-            <p class="card-text"><strong>Location:</strong> San Francisco, CA</p>
-            <p class="card-text"><strong>Responsibilities:</strong> Create user-friendly interfaces.</p>
-          </div>
-          <button class="btn btn-success" onclick="applyForJob('UX/UI Designer')">Apply Now</button>
-        </div>
-      </div>
-    </section>
+header {
+  background-color: rgba(255, 255, 255, 0.95);
+  color: #333;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  height: 60px;
+  position: relative;
+}
 
-    <!-- Application Form Section -->
-    <section id="application-form" class="mb-5">
-      <h2 class="text-center mb-4">Application Form</h2>
-      <form action="https://api.web3forms.com/submit" method="POST">
-        <input type="hidden" name="access_key" value="b43aa648-b382-435a-aedd-239c592eb119">
-        <div class="col-md-12">
-          <label for="name" class="form-label">Name:</label>
-          <input type="text" id="name" name="name" class="form-control" required>
-        </div>
-        <div class="col-md-12">
-          <label for="email" class="form-label">Email:</label>
-          <input type="email" id="email" name="email" class="form-control" required>
-        </div>
-        <div class="col-md-12">
-          <label for="job-title" class="form-label">Position:</label>
-          <input type="text" id="job-title" name="job_title" class="form-control">
-        </div>
-        <div class="col-md-12">
-          <label for="resume" class="form-label">Upload Resume:</label>
-          <span class="small-symbol">
-            <p>(Upload file Size < 5 MB) </span>
-            </p>
-            <input type="file" id="resume" name="resume" class="form-control" required>
-        </div>
-        <div class="col-12">
-          <button type="submit" class="btn btn-success w-100">Submit Application</button>
-        </div>
-      </form>
-    </section>
-  </main>
 
-  <footer>
-    
-    <p>&copy; DataCognit 2023</p>
-    <p>The Tapal House #118, Vijayapura, KARNATAKA 586102</p>
-  </footer>
 
-  <!-- Scroll to Top Button -->
-  <button id="scrollToTop" class="btn btn-success position-fixed bottom-0 end-0 m-3" title="Go to top">&#8679;</button>
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
 
-  <!-- Bootstrap JS and Popper.js -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="script.js"></script>
-</body>
+nav ul li {
+  margin-left: 20px;
+  margin-right: 20px;
+}
 
-</html>
+nav ul li a {
+  color: rgb(3, 4, 3);
+  text-decoration: none;
+  padding: 10px;
+}
+
+nav ul li a:hover {
+  background-color: #12aa3f;
+  border-radius: 5px;
+}
+
+#details {
+  color: #000;
+}
+
+/* Scroll to Top Button */
+#scrollToTop {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  /* Stick to the right side */
+  z-index: 99;
+  width: 50px;
+  /* Make it round by setting equal width and height */
+  height: 50px;
+  background-color: #136733;
+  /* Button background color */
+  color: white;
+  /* Text (arrow) color */
+  border: none;
+  outline: none;
+  border-radius: 50%;
+  /* Make the button round */
+  font-size: 24px;
+  /* Size of the upward arrow */
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#scrollToTop:hover {
+  background-color: #555;
+  /* Change background on hover */
+}
+
+/* Container for logo and text */
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.header-logo {
+  max-width: 100px;
+  margin-right: 15px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 1.5em;
+  white-space: nowrap;
+  /* Prevents the text from wrapping */
+}
+
+/* Logo animation */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.logoImage {
+  max-width: 150px;
+  margin: 10px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s, transform 0.6s;
+}
+
+.animate.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
+/* Hamburger Menu Styling */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 25px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 10;
+  transition: transform 0.3s ease;
+}
+
+.hamburger div {
+  width: 100%;
+  height: 3px;
+  background-color: #333;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+/* Hamburger open state (when active) */
+.hamburger.active div:nth-child(1) {
+  transform: translateY(10px) rotate(45deg);
+}
+
+.hamburger.active div:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active div:nth-child(3) {
+  transform: translateY(-10px) rotate(-45deg);
+}
+
+/* Hero Section */
+.hero {
+  background: url('hero-background.jpg') center/cover no-repeat;
+  text-align: center;
+  padding: 100px 20px;
+  color: rgb(22, 144, 36);
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.logo {
+  display: block;
+  margin: 0 auto;
+  max-width: 50%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Our Pillar Section */
+.pillar {
+  padding: 50px;
+  background-color: #136733;
+  text-align: center;
+}
+
+.pillar-list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.pillar-item {
+  background-color: white;
+  padding: 50px;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  max-width: 300px;
+  cursor: pointer;
+  box-shadow: 10px 7px 5px #5fdd06;
+
+}
+
+.pillar-item h3 {
+  margin-bottom: 15px;
+}
+
+.pillar-item p {
+  font-size: 1em;
+}
+
+/* About Us Section */
+.about {
+  padding: 50px;
+  background-color: #f5f5f5;
+  text-align: center;
+}
+
+.about-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.about h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.about-content p {
+  font-size: 1.1em;
+  margin-bottom: 20px;
+}
+
+/* Our Services Section */
+.services {
+  padding: 50px;
+  background-color: #136733;
+  text-align: center;
+}
+
+.service-list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.service-item {
+  background-color: white;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 10px;
+  /* box-shadow: 10px 7px 10px rgba(177, 25, 25, 0.1); */
+  max-width: 300px;
+  box-shadow: 8px 7px 5px #5fdd06;
+}
+
+.service-item h3 {
+  margin-bottom: 15px;
+}
+
+.service-item p {
+  font-size: 1em;
+}
+
+/* Contact Us Section */
+.contact {
+  padding: 50px;
+  background-color: #136733;
+  text-align: center;
+}
+
+.contact p {
+  font-size: 1.1em;
+  margin-bottom: 30px;
+}
+
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button[type="submit"] {
+  background-color: #09a528;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #056f23;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #333;
+  color: #fff;
+}
+
+/* Tools Section */
+.tools {
+  padding: 50px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.tools h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.logo-list {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+
+}
+
+.logo-list img {
+  max-width: 150px;
+  height: auto;
+}
+
+.logoImage {
+  margin: 10px;
+  display: block;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Slideshow Container */
+.slideshow-container {
+  position: relative;
+  max-width: 100%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.slide {
+  display: none;
+}
+
+.slideImage {
+  width: 100%;
+  height: auto;
+  max-height: 70vh;
+  object-fit: cover;
+}
+
+/* Fading Animation */
+.fade {
+  animation: fadeEffect 1s;
+}
+
+@keyframes fadeEffect {
+  from {
+    opacity: 0.4;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* Navigation Buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+/* Dots below slideshow */
+.spanDiv {
+  text-align: center;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.dot.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+/* Span CSS */
+.spanDiv {
+  text-align: center;
+}
+
+.animated-text {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  letter-spacing: 0.15em;
+  animation: typing 4s steps(30, end);
+  /* font-size: larger; */
+  font-size: 5em;
+
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 80%;
+  }
+}
+
+/* Style for the slide tagline */
+.slide-tagline {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  /* Slightly narrow width to avoid text overflow on smaller screens */
+  text-align: center;
+  z-index: 1;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+/* Enhanced styling for the text inside the slide tagline */
+.slide-tagline p {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.6);
+  /* Semi-transparent background for contrast */
+  padding: 15px 20px;
+  border-radius: 8px;
+  /* Rounded corners */
+  display: inline-block;
+  /* Shrinks the background to fit text */
+  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.8);
+  /* Stronger shadow for better visibility */
+  margin: 0;
+}
+
+/* Process Steps */
+.process-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-bottom: 20px;
+}
+
+.step {
+  background-color: #e9ecef;
+  border-radius: 6px;
+  padding: 20px;
+  position: relative;
+}
+
+.step-icon {
+  font-size: 24px;
+  color: #13a600;
+  position: absolute;
+  top: -10px;
+  left: 20px;
+}
+
+/* Connectors */
+.connector {
+  border-left: 2px solid #087205;
+  height: 30px;
+  margin: 0 auto;
+}
+
+/* CSS for Data Management.html */
+.dm {
+  width: 100%;
+  height: 600px;
+}
+
+
+
+
+/* Responsive Design for Larger Screens */
+@media (min-width: 1024px) {
+  .slideshow-container {
+    width: 80%;
+    max-width: 100%;
+    height: 420px;
+    margin: 30px auto;
+  }
+
+  .slideImage {
+    max-height: 90vh;
+    object-fit: cover;
+  }
+
+  /* Increase size of next/prev buttons on desktop */
+  .prev,
+  .next {
+    padding: 20px;
+    font-size: 24px;
+    /* Make buttons larger */
+  }
+
+  .prev {
+    left: 20px;
+    /* Move prev button more to the left */
+  }
+
+  .next {
+    right: 20px;
+    /* Move next button more to the right */
+  }
+
+  .slide-tagline {
+    font-size: 2rem;
+    /* Adjust text size for tablet screens */
+  }
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+
+  .slide-tagline {
+    font-size: 1.3rem;
+    /* Further reduce text size for smaller devices */
+  }
+
+  .slideImage {
+    max-height: 40vh;
+  }
+
+  .prev,
+  .next {
+    font-size: 14px;
+    padding: 12px;
+  }
+
+  .text {
+    font-size: 16px;
+    bottom: 10px;
+    left: 10px;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background-color: rgba(51, 51, 51, 0.95);
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+
+  nav ul li {
+    text-align: center;
+  }
+
+  nav ul li a {
+    display: grid;
+    padding: 15px;
+    color: rgb(244, 238, 238);
+  }
+
+  nav ul li :hover {
+    display: block;
+    padding: 15px;
+    color: rgb(251, 249, 249);
+    /* Change link color for visibility */
+  }
+
+  .logo {
+    max-width: 90%;
+  }
+
+  .pillar-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logoImage {
+    max-width: 150px;
+    margin: 10px;
+    display: block;
+    margin: 0 auto;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .animated-text {
+    font-size: 2em;
+
+  }
+
+  .dm {
+    max-height: fit-content;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .slide-tagline {
+    bottom: 5%;
+    /* Move text a little higher on mobile */
+  }
+
+  .slide-tagline p {
+    font-size: 1.1rem;
+    /* Smaller text for mobile devices */
+    padding: 10px 15px;
+    /* Adjust padding for smaller screens */
+  }
+
+  .about,
+  .services,
+  .pillar .contact {
+    padding: 30px;
+  }
+
+  .pillar-item {
+    max-width: 100%;
+  }
+
+  .service-item {
+    max-width: 100%;
+  }
+
+  .logoImage {
+    max-width: 150px;
+    margin: 10px;
+    display: block;
+    margin: 0 auto;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .header-logo {
+    max-width: 60px;
+    /* Further reduce logo size on mobile */
+  }
+
+  h1 {
+    font-size: 1.2em;
+    /* Reduce font size for mobile */
+  }
+
+  .slideImage {
+    max-height: 40vh;
+  }
+
+  .prev,
+  .next {
+    font-size: 12px;
+    padding: 10px;
+  }
+
+  .dot {
+    height: 10px;
+    width: 10px;
+  }
+
+  .dm {
+    max-height: fit-content;
+  }
+
+}
