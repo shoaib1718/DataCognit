@@ -58,7 +58,7 @@ document.querySelector('.logo-container').addEventListener('click', function() {
 
 
 
-// // Show slides and automatically change them every 3 seconds
+// Show slides and automatically change them every 3 seconds
 // function showSlides() {
 //   const slides = document.querySelectorAll(".slide");
 //   const dots = document.querySelectorAll(".dot");
@@ -116,7 +116,6 @@ function handleTouchMove(evt) {
 }
 
 // JavaScript for the slideshow functionality
-
 let slideIndex = 0;
 showSlides();
 
