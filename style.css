@@ -5,7 +5,13 @@ body {
   margin: 0;
   padding: 0;
   color: #333;
+
+  /* justify-content: center;
+  align-items: center;
+  display: flex; */
 }
+
+
 
 header {
   background-color: rgba(255, 255, 255, 0.95);
@@ -51,18 +57,25 @@ nav ul li a:hover {
 /* Scroll to Top Button */
 #scrollToTop {
   display: none;
+  /* Hidden by default */
   position: fixed;
   bottom: 20px;
   right: 20px;
+  /* Stick to the right side */
   z-index: 99;
   width: 50px;
+  /* Make it round by setting equal width and height */
   height: 50px;
   background-color: #136733;
+  /* Button background color */
   color: white;
+  /* Text (arrow) color */
   border: none;
   outline: none;
   border-radius: 50%;
+  /* Make the button round */
   font-size: 24px;
+  /* Size of the upward arrow */
   cursor: pointer;
   transition: background-color 0.3s;
 }
@@ -199,6 +212,7 @@ h1 {
   max-width: 300px;
   cursor: pointer;
   box-shadow: 10px 7px 5px #5fdd06;
+
 }
 
 .pillar-item h3 {
@@ -251,7 +265,7 @@ h1 {
   padding: 20px;
   margin: 10px;
   border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 10px 7px 10px rgba(177, 25, 25, 0.1); */
   max-width: 300px;
   box-shadow: 8px 7px 5px #5fdd06;
 }
@@ -333,6 +347,7 @@ footer {
   justify-content: center;
   gap: 40px;
   flex-wrap: wrap;
+
 }
 
 .logo-list img {
@@ -372,12 +387,18 @@ footer {
 }
 
 @keyframes fadeEffect {
-  from { opacity: 0.4; } 
-  to { opacity: 1; }
+  from {
+    opacity: 0.4;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 /* Navigation Buttons */
-.prev, .next {
+.prev,
+.next {
   cursor: pointer;
   position: absolute;
   top: 50%;
@@ -392,7 +413,8 @@ footer {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-.prev:hover, .next:hover {
+.prev:hover,
+.next:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
@@ -423,14 +445,14 @@ footer {
   transition: background-color 0.6s ease;
 }
 
-.dot.active, .dot:hover {
+.dot.active,
+.dot:hover {
   background-color: #717171;
 }
 
 /* Span CSS */
-.spanDiv
-{
-  text-align:center;
+.spanDiv {
+  text-align: center;
 }
 
 .animated-text {
@@ -448,10 +470,44 @@ footer {
   from {
     width: 0;
   }
+
   to {
     width: 80%;
   }
 }
+
+/* Style for the slide tagline */
+.slide-tagline {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  /* Slightly narrow width to avoid text overflow on smaller screens */
+  text-align: center;
+  z-index: 1;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+/* Enhanced styling for the text inside the slide tagline */
+.slide-tagline p {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.6);
+  /* Semi-transparent background for contrast */
+  padding: 15px 20px;
+  border-radius: 8px;
+  /* Rounded corners */
+  display: inline-block;
+  /* Shrinks the background to fit text */
+  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.8);
+  /* Stronger shadow for better visibility */
+  margin: 0;
+}
+
+
 
 /* Responsive Design for Larger Screens */
 @media (min-width: 1024px) {
@@ -484,6 +540,11 @@ footer {
     right: 20px;
     /* Move next button more to the right */
   }
+
+  .slide-tagline {
+    font-size: 2rem;
+    /* Adjust text size for tablet screens */
+  }
 }
 
 
@@ -491,11 +552,17 @@ footer {
 /* Responsive Design */
 @media (max-width: 768px) {
 
+  .slide-tagline {
+    font-size: 1.3rem;
+    /* Further reduce text size for smaller devices */
+  }
+
   .slideImage {
     max-height: 40vh;
   }
-  
-  .prev, .next {
+
+  .prev,
+  .next {
     font-size: 14px;
     padding: 12px;
   }
@@ -513,13 +580,18 @@ footer {
   nav ul {
     display: none;
     flex-direction: column;
-    background-color: rgba(51, 51, 51, 0.95); /* Semi-transparent background */
-    position: absolute; /* Make it fixed to overlay */
-    top: 60px; /* Below the header */
+    background-color: rgba(51, 51, 51, 0.95);
+    /* Semi-transparent background */
+    position: absolute;
+    /* Make it fixed to overlay */
+    top: 60px;
+    /* Below the header */
     right: 0;
     width: 100%;
-    z-index: 100; /* Ensure it appears above everything else */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Shadow for better visibility */
+    z-index: 100;
+    /* Ensure it appears above everything else */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    /* Shadow for better visibility */
   }
 
   nav ul.active {
@@ -533,13 +605,15 @@ footer {
   nav ul li a {
     display: grid;
     padding: 15px;
-    color: rgb(244, 238, 238); /* Change link color for visibility */
+    color: rgb(244, 238, 238);
+    /* Change link color for visibility */
   }
 
   nav ul li :hover {
     display: block;
     padding: 15px;
-    color: rgb(251, 249, 249); /* Change link color for visibility */
+    color: rgb(251, 249, 249);
+    /* Change link color for visibility */
   }
 
   .logo {
@@ -567,11 +641,20 @@ footer {
 
   .animated-text {
     font-size: 2em;
-  
+
   }
 }
 
 @media (max-width: 480px) {
+
+  .slide-tagline {
+    bottom: 5%; /* Move text a little higher on mobile */
+  }
+  
+  .slide-tagline p {
+    font-size: 1.1rem; /* Smaller text for mobile devices */
+    padding: 10px 15px; /* Adjust padding for smaller screens */
+  }
 
   .about,
   .services,
@@ -597,18 +680,21 @@ footer {
   }
 
   .header-logo {
-    max-width: 60px;  /* Further reduce logo size on mobile */
+    max-width: 60px;
+    /* Further reduce logo size on mobile */
   }
 
   h1 {
-    font-size: 1.2em;   /* Reduce font size for mobile */
+    font-size: 1.2em;
+    /* Reduce font size for mobile */
   }
 
   .slideImage {
     max-height: 40vh;
   }
 
-  .prev, .next {
+  .prev,
+  .next {
     font-size: 12px;
     padding: 10px;
   }
@@ -617,4 +703,5 @@ footer {
     height: 10px;
     width: 10px;
   }
+
 }
