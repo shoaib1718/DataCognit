@@ -5,6 +5,10 @@ body {
   margin: 0;
   padding: 0;
   color: #333;
+
+  /* justify-content: center;
+  align-items: center;
+  display: flex; */
 }
 
 
@@ -503,6 +507,43 @@ footer {
   margin: 0;
 }
 
+/* Process Steps */
+.process-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-bottom: 20px;
+}
+
+.step {
+  background-color: #e9ecef;
+  border-radius: 6px;
+  padding: 20px;
+  position: relative;
+}
+
+.step-icon {
+  font-size: 24px;
+  color: #13a600;
+  position: absolute;
+  top: -10px;
+  left: 20px;
+}
+
+/* Connectors */
+.connector {
+  border-left: 2px solid #087205;
+  height: 30px;
+  margin: 0 auto;
+}
+
+/* CSS for Data Management.html */
+.dm {
+  width: 100%;
+  height: 600px;
+}
+
+
 
 
 /* Responsive Design for Larger Screens */
@@ -577,17 +618,12 @@ footer {
     display: none;
     flex-direction: column;
     background-color: rgba(51, 51, 51, 0.95);
-    /* Semi-transparent background */
     position: absolute;
-    /* Make it fixed to overlay */
     top: 60px;
-    /* Below the header */
     right: 0;
     width: 100%;
     z-index: 100;
-    /* Ensure it appears above everything else */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    /* Shadow for better visibility */
   }
 
   nav ul.active {
@@ -602,7 +638,6 @@ footer {
     display: grid;
     padding: 15px;
     color: rgb(244, 238, 238);
-    /* Change link color for visibility */
   }
 
   nav ul li :hover {
@@ -639,17 +674,24 @@ footer {
     font-size: 2em;
 
   }
+
+  .dm {
+    max-height: fit-content;
+  }
 }
 
 @media (max-width: 480px) {
 
   .slide-tagline {
-    bottom: 5%; /* Move text a little higher on mobile */
+    bottom: 5%;
+    /* Move text a little higher on mobile */
   }
-  
+
   .slide-tagline p {
-    font-size: 1.1rem; /* Smaller text for mobile devices */
-    padding: 10px 15px; /* Adjust padding for smaller screens */
+    font-size: 1.1rem;
+    /* Smaller text for mobile devices */
+    padding: 10px 15px;
+    /* Adjust padding for smaller screens */
   }
 
   .about,
@@ -700,36 +742,8 @@ footer {
     width: 10px;
   }
 
-}
+  .dm {
+    max-height: fit-content;
+  }
 
-
-
-/* Process Steps */
-.process-steps {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  margin-bottom: 20px;
-}
-
-.step {
-  background-color: #e9ecef;
-  border-radius: 6px;
-  padding: 20px;
-  position: relative;
-}
-
-.step-icon {
-  font-size: 24px;
-  color: #13a600;
-  position: absolute;
-  top: -10px;
-  left: 20px;
-}
-
-/* Connectors */
-.connector {
-  border-left: 2px solid #087205;
-  height: 30px;
-  margin: 0 auto;
 }
