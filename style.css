@@ -5,10 +5,6 @@ body {
   margin: 0;
   padding: 0;
   color: #333;
-
-  /* justify-content: center;
-  align-items: center;
-  display: flex; */
 }
 
 
@@ -92,8 +88,16 @@ nav ul li a:hover {
 }
 
 .header-logo {
-  max-width: 100px;
-  margin-right: 15px;
+  width: 50px; /* Adjust size of the logo */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 10px; /* Add space between the logo and text */
+}
+
+/* Style the logo text */
+.logo-text {
+  font-size: 24px; /* Adjust the font size */
+  color: #11a839; /* Customize the color */
+  font-weight: bold; /* Make the text bold */
 }
 
 h1 {
@@ -184,8 +188,8 @@ h1 {
 .logo {
   display: block;
   margin: 0 auto;
-  max-width: 50%;
-  height: auto;
+  /* max-width: 50%; */
+  height: 90px;
   object-fit: contain;
 }
 
@@ -335,6 +339,7 @@ footer {
   padding: 50px;
   background-color: #f9f9f9;
   text-align: center;
+
 }
 
 .tools h2 {
@@ -347,7 +352,6 @@ footer {
   justify-content: center;
   gap: 40px;
   flex-wrap: wrap;
-
 }
 
 .logo-list img {
@@ -360,6 +364,8 @@ footer {
   display: block;
   height: auto;
   object-fit: contain;
+
+
 }
 
 /* Slideshow Container */
@@ -462,7 +468,7 @@ footer {
   letter-spacing: 0.15em;
   animation: typing 4s steps(30, end);
   /* font-size: larger; */
-  font-size: 5em;
+  font-size: 4em;
 
 }
 
@@ -544,10 +550,9 @@ footer {
 }
 
 /* CSS of AI and Analytics */
-.ai_Image{
+.ai_Image {
   width: 100%;
 }
-
 
 
 
@@ -750,5 +755,4 @@ footer {
   .dm {
     max-height: fit-content;
   }
-
 }
