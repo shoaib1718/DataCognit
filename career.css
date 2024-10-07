@@ -228,13 +228,12 @@ footer {
 
 #scrollToTop:hover {
     background-color: #555;
-    /* Change background on hover */
+    
 }
 
 /* File Size  */
 .small-symbol {
     font-size: 0.6em;
-    /* 80% of the paragraph font size */
 }
 
 /* Responsive Design */
@@ -250,13 +249,13 @@ footer {
       nav ul {
         display: none;
         flex-direction: column;
-        background-color: rgba(51, 51, 51, 0.95); /* Semi-transparent background */
-        position: absolute; /* Make it fixed to overlay */
-        top: 60px; /* Below the header */
+        background-color: rgba(51, 51, 51, 0.95); 
+        position: absolute; 
+        top: 60px; 
         right: 0;
         width: 100%;
-        z-index: 100; /* Ensure it appears above everything else */
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Shadow for better visibility */
+        z-index: 100; 
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); 
       }
     
       nav ul.active {
@@ -270,13 +269,13 @@ footer {
       nav ul li a {
         display: grid;
         padding: 15px;
-        color: rgb(244, 238, 238); /* Change link color for visibility */
+        color: rgb(244, 238, 238); 
       }
     
       nav ul li :hover {
         display: block;
         padding: 15px;
-        color: rgb(251, 249, 249); /* Change link color for visibility */
+        color: rgb(251, 249, 249); 
       }
 
     .job-listing {
