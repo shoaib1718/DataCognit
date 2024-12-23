@@ -237,3 +237,14 @@ function submitApplication(event) {
   document.getElementById('job-listings').style.display = 'block';
 }
 
+
+//Code to Open PDF
+const learnMoreLinks = document.querySelectorAll('.learn-more');
+
+learnMoreLinks.forEach(link => {
+    link.addEventListener('click', event => {
+        event.preventDefault();
+        const pdfUrl = link.getAttribute('data-pdf');
+        window.open(pdfUrl, '_blank');
+    });
+});
