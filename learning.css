@@ -10,6 +10,19 @@ body {
     width: 100%;
 }
 
+hr {
+    border: none;
+    height: 1px;
+    background-color: #ccc;
+    margin: 20px 0;
+}
+
+.info {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 10px;
+}
+
 .sidebar {
     background-color: #f0f0f0;
     padding: 20px;
