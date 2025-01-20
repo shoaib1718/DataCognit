@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Timesheet</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 10px;
+            padding: 5px;
+        }
+        form {
+            max-width: 400px;
+            background: #f4f4f4;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        label, input, textarea {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+    <div class="logo-container">
+      <a href="index.html">
+        <img src="images/DATACOGNIT.png" alt="DataCognit Logo" class="header-logo"></a>
+      <p class="logo-text"> DataCognit </p>
+    </div>
+    <div class="hamburger">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#about">About Us</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="Career.html">Careers</a></li>
+        <li><a href="timeSheet.html">Timesheet</a></li>
+      </ul>
+    </nav>
+  </header>
+    <h2>Employee Timesheet</h2>
+    <form id="timesheetForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required>
+
+        <label for="date">Date:</label>
+        <input type="date" id="date" required>
+
+        <label for="hours">Hours Worked:</label>
+        <input type="number" id="hours" required>
+
+        <label for="tasks">Tasks Completed:</label>
+        <textarea id="tasks" rows="4" required></textarea>
+
+        <button type="button" onclick="sendEmail()">Submit</button>
+    </form>
+
+    <script>
+        function sendEmail() {
+            var name = document.getElementById('name').value;
+            var date = document.getElementById('date').value;
+            var hours = document.getElementById('hours').value;
+            var tasks = document.getElementById('tasks').value;
+            
+            var email = "janvekarshoaib@gmail.com"; // Replace with the recipient email
+            var subject = "Timesheet Submission from " + name;
+            var body = `Name: ${name}\n\n` +
+                       `Date: ${date}\n\n` +
+                       `Hours Worked: ${hours}\n\n` +
+                       `Tasks Completed:\n${tasks}`;
+            
+            var gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            window.open(gmailUrl, '_blank');
+        }
+    </script>
+    <script src="js/script.js"></script>
+</body>
+</html>
