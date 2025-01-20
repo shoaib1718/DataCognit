@@ -85,7 +85,8 @@
             var body = `Name: ${name}\n\n` +
                        `Date: ${date}\n\n` +
                        `Hours Worked: ${hours}\n\n` +
-                       `Tasks Completed:\n${tasks}`;
+                       `Tasks Completed:\n${tasks}\n\n` +
+                       `Thanks,\n${name}`;
             
             var gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
             window.open(gmailUrl, '_blank');
